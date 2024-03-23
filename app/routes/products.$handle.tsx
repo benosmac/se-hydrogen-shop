@@ -28,7 +28,7 @@ import type {
 import {getVariantUrl} from '~/lib/variants';
 
 export const meta: MetaFunction<typeof loader> = ({data}) => {
-  return [{title: `Hydrogen | ${data?.product.title ?? ''}`}];
+  return [{title: `${data?.product.title ?? ''}`}];
 };
 
 export async function loader({params, request, context}: LoaderFunctionArgs) {
@@ -136,7 +136,6 @@ function ProductImage({image}: {image: ProductVariantFragment['image']}) {
     <div className="product-image">
       <Image
         alt={image.altText || 'Product Image'}
-        aspectRatio="1/1"
         data={image}
         key={image.id}
         sizes="(min-width: 45em) 50vw, 100vw"
