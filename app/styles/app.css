@@ -6,10 +6,27 @@
   --header-height: 64px;
   --color-dark: #000;
   --color-light: #fff;
+  --color-brand-bg: #1b0033;
+  --color-brand-secondary: #303273;
+  --color-brand-accent: #00afc7;
+  --root-lh: 1.6;
+}
+html {
+  background-color: var(--color-brand-bg);
+  color: var(--color-light);
+  line-height: var(--root-lh);
+}
+img {
+  border-radius: 2px;
 }
 
-img {
-  border-radius: 4px;
+button {
+  font-size: 1.125rem;
+  padding: 0.5em 1em;
+  background-color: transparent;
+  border: 2px solid var(--color-brand-accent);
+  border-radius: 1em;
+  color: var(--color-brand-accent);
 }
 
 /*
@@ -127,9 +144,14 @@ aside li {
 * components/Header
 * --------------------------------------------------
 */
+
+.logo {
+  width: 188px;
+  height: auto;
+}
 .header {
   align-items: center;
-  background: #fff;
+  color: var(--color-brand-accent);
   display: flex;
   height: var(--header-height);
   padding: 0 1rem;
@@ -298,8 +320,6 @@ aside li {
   align-items: center;
   gap: 1rem;
 }
-
-
 
 /*
 * --------------------------------------------------

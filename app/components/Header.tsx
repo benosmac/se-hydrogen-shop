@@ -13,7 +13,7 @@ export function Header({header, isLoggedIn, cart}: HeaderProps) {
   return (
     <header className="header">
       <NavLink prefetch="intent" to="/" style={activeLinkStyle} end>
-        <strong>{shop.name}</strong>
+        <img className="logo" src="/logo.svg" alt={shop.name} />
       </NavLink>
       <HeaderMenu
         menu={menu}
@@ -185,6 +185,6 @@ function activeLinkStyle({
 }) {
   return {
     fontWeight: isActive ? 'bold' : undefined,
-    color: isPending ? 'grey' : 'black',
+    color: isPending ? 'grey' : 'var(--color-light)',
   };
 }
